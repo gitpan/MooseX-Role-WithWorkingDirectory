@@ -1,3 +1,17 @@
+package MooseX::Role::WithWorkingDirectory;
+BEGIN {
+  $MooseX::Role::WithWorkingDirectory::VERSION = '0.02'; # TRIAL
+}
+
+use Moose::Role;
+
+sub with_wd {
+    my ( $self, $directory ) = @_;
+
+    return bless [ $self, $directory ],
+        'MooseX::Role::WithWorkingDirectory::Proxy';
+}
+
 package
     MooseX::Role::WithWorkingDirectory::Proxy;
 
@@ -35,20 +49,6 @@ sub AUTOLOAD {
     }
 }
 
-package MooseX::Role::WithWorkingDirectory;
-BEGIN {
-  $MooseX::Role::WithWorkingDirectory::VERSION = '0.01';
-}
-
-use Moose::Role;
-
-sub with_wd {
-    my ( $self, $directory ) = @_;
-
-    return bless [ $self, $directory ],
-        'MooseX::Role::WithWorkingDirectory::Proxy';
-}
-
 1;
 
 
@@ -57,11 +57,11 @@ sub with_wd {
 
 =head1 NAME
 
-MooseX::Role::WithWorkingDirectory::Proxy - Syntactic sugar for running a method while in a directory
+MooseX::Role::WithWorkingDirectory - Syntactic sugar for running a method while in a directory
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 

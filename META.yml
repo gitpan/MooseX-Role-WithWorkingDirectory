@@ -23,4 +23,4 @@ requires:
   Moose: 2
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/ReportBug.html?Queue=MooseX-Role-WithWorkingDirectory
-version: 0.01
+version: 0.02

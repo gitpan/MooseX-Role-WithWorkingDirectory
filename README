@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution MooseX-Role-WithWorkingDirectory,
-version 0.01:
+version 0.02:
 
   Syntactic sugar for running a method while in a directory
 
