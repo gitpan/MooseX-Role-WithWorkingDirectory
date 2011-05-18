@@ -1,6 +1,6 @@
 package MooseX::Role::WithWorkingDirectory;
 BEGIN {
-  $MooseX::Role::WithWorkingDirectory::VERSION = '0.02'; # TRIAL
+  $MooseX::Role::WithWorkingDirectory::VERSION = '0.02';
 }
 
 use Moose::Role;
